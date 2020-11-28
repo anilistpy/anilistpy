@@ -1,0 +1,60 @@
+<html>
+ <head>
+	<title>Anilistpy</title>
+ </head>
+<body bgcolor="#000000" text="#f0e0d0" link="#c0ffc0" vlink="#80c080" alink="#80c080">
+
+<font size=2 color="#d0c080">
+Anilistpy<br>
+</font>
+<font size=4>
+Å@Documenation<br>
+</font>
+<font size=3>
+<hr>
+<center>
+    <h1 id="anilistpy">Anilistpy</h1>
+    <p>An easy to use wrapper for anilist.co APIv2</p>
+    <pre><code>pip <span class="hljs-keyword">install</span> anilistpy
+    </code></pre><p>note: this wraper is in very early stage and more features are to come.</p>
+    <p>Documenation on the the <a href="https://aadityaaryal.github.io/anilistpy">gh-page</a></p>
+    
+</center>
+    <h3 id="example">Example code:</h3>
+    <pre><code class="lang-py">
+    import anilistpy <span class="hljs-selector-id">#pip</span> install anilistpy
+    
+    id = <span class="hljs-number">1</span> <span class="hljs-selector-id">#id</span> of the anime 
+    
+    anime = anilistpy.Anime(id)
+    
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(anime.title()</span></span>) <span class="hljs-selector-id">#prints</span> the romaji title of the anime
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(anime.episodes()</span></span>) <span class="hljs-selector-id">#prints</span> the ammount of episodes of the anime
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(anime.genres()</span></span>) <span class="hljs-selector-id">#list</span> of genres the anime falls under
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(anime.tags()</span></span>) <span class="hljs-selector-id">#dict</span> of tags this anime has on anilist
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(anime.studios()</span></span>) <span class="hljs-selector-id">#name</span> of studios involved
+    
+    mid = <span class="hljs-number">30013</span> <span class="hljs-selector-id">#id</span> of manga
+    
+    manga = anilistpy.Manga(mid)
+    
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(manga.title()</span></span>) <span class="hljs-selector-id">#prints</span> the romaji title of the manga
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(manga.chapters()</span></span>) <span class="hljs-selector-id">#prints</span> the ammount of chapters <span class="hljs-keyword">in</span> the manga
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(manga.genres()</span></span>) <span class="hljs-selector-id">#list</span> of genres the manga falls under
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(manga.tags()</span></span>) <span class="hljs-selector-id">#dict</span> of tags this manga has on anilist
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(manga.staffs()</span></span>) <span class="hljs-selector-id">#name</span> of staffs involved
+    </code></pre>
+
+<br>
+</font>
+
+
+<font size=2 color="#d0a080">
+<hr>
+<i>Å@2020 (C)opyright Aaditya Aryal. All rights reserved.</i>
+</font>
+
+
+</body>
+</html>
+
