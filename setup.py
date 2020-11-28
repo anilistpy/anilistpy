@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="anilistpy-AadityaAryal", 
-    version="0.0.1",
+    name="anilistpy", 
+    version="0.0.1.1",
     author="Aaditya Aryal",
     author_email="aryalaadi123@gmail.com",
     description="API wrapper for anilist.co",
