@@ -2,6 +2,7 @@ import requests
 import json
 class Anime:
     def __init__(self, sQ):
+        self.id = sQ 
         query = '''
         query ($id: Int, $page: Int, $perPage: Int, $search: String) {
             Page (page: $page, perPage: $perPage) {
@@ -9,6 +10,7 @@ class Anime:
                     id
                     title {
                         romaji
+                        english
                     }
                     episodes
                     description
@@ -23,6 +25,23 @@ class Anime:
                             name
                         }
                     }
+                    startDate{
+                        year
+                        month
+                        day
+                    }
+                    endDate{
+                        year
+                        month
+                        day
+                    }
+                    season
+                    coverImage{
+                        medium
+                        large
+                        extraLarge
+                    }
+                    bannerImage
                 }
             }
         }
@@ -41,9 +60,11 @@ class Anime:
         raw = json.loads(response.text)
         self.media = raw["data"]["Page"]["media"]
            
+    def reload(self):
+        self.__init__(self.id)
 
-    def title(self): 
-        return self.media[0]["title"]["romaji"]
+    def title(self, LA: str): # LA options: {romaji}{english}
+        return self.media[0]["title"][LA]
     def episodes(self):
         return self.media[0]["episodes"]
     def description(self):
@@ -58,4 +79,17 @@ class Anime:
         return self.media[0]["tags"]
     def studios(self):
         return self.media[0]["studios"]["nodes"]
+    def season(self):
+        return self.media[0]["season"]
+    def startDate(self):
+        return self.media[0]["startDate"]
+    def endDate(self):
+        return self.media[0]["endDate"]
+    def coverImage(self, SIZE):
+        if SIZE != "large" or "medium" or "extraLarge":
+            print("only large medium or extraLarge")
+        else:
+            return self.media[0]["coverImage"][SIZE]
+    def bannerImage(self):
+        return self.media[0]["bannerImage"]
 

@@ -13,29 +13,29 @@ Documenation on the the [gh-page](https://anilistpy.github.io)
 ## example 1
 ```py
 
-import anilistpy #pip install anilistpy
+import anilistpy            # pip install anilistpy
 
-id = 1 #id of the anime 
+id = 1                      #id of the anime 
 
 anime = anilistpy.Anime(id)
 
-print(anime.title()) #prints the romaji title of the anime
-print(anime.episodes()) #prints the ammount of episodes of the anime
-print(anime.description())#prints the description
-print(anime.genres()) #list of genres the anime falls under
-print(anime.tags()) #dict of tags this anime has on anilist
-print(anime.studios()) #name of studios involved
+print(anime.title())        #prints the romaji title of the anime
+print(anime.episodes())     #prints the ammount of episodes of the anime
+print(anime.description())  #prints the description
+print(anime.genres())       #list of genres the anime falls under
+print(anime.tags())         #dict of tags this anime has on anilist
+print(anime.studios())      #name of studios involved
 
-mid = 30013 #id of manga
+mid = 30013                 #id of manga
 
 manga = anilistpy.Manga(mid)
 
-print(manga.title()) #prints the romaji title of the manga
-print(manga.chapters()) #prints the ammount of chapters in the manga
-print(manga.description())#prints the description
-print(manga.genres()) #list of genres the manga falls under
-print(manga.tags()) #dict of tags this manga has on anilist
-print(manga.staffs()) #name of staffs involved
+print(manga.title())        #prints the romaji title of the manga
+print(manga.chapters())     #prints the ammount of chapters in the manga
+print(manga.description())  #prints the description
+print(manga.genres())       #list of genres the manga falls under
+print(manga.tags())         #dict of tags this manga has on anilist
+print(manga.staffs())       #name of staffs involved
 
 ```
 

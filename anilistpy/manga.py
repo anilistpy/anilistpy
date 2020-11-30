@@ -2,6 +2,7 @@ import requests
 import json
 class Manga:
     def __init__(self, sQ):
+        self.id = sQ
         query = '''
         query ($id: Int, $page: Int, $perPage: Int, $search: String) {
             Page (page: $page, perPage: $perPage) {
@@ -14,6 +15,7 @@ class Manga:
                     description
                     genres
                     averageScore
+                    volumes
                     tags{
                         name
                     }
@@ -24,6 +26,22 @@ class Manga:
                             }
                         }
                     }
+                    startDate{
+                        year
+                        month
+                        day
+                    }
+                    endDate{
+                        year
+                        month
+                        day
+                    }
+                    coverImage{
+                        medium
+                        large
+                        extraLarge
+                    }
+                    bannerImage
                 }
             }
         }
@@ -40,14 +58,17 @@ class Manga:
 
         response = requests.post(url, json={'query': query, 'variables': variables})
         raw = json.loads(response.text)
-        print(raw)
         self.media = raw["data"]["Page"]["media"]
            
+    def reload(self):
+        self.__init__(self.id)
 
-    def title(self): 
-        return self.media[0]["title"]["romaji"]
+    def title(self, LA): # LA options: {romaji}{english}
+        return self.media[0]["title"][LA]
     def chapters(self):
         return self.media[0]["chapters"]
+    def volumes(self):
+        return self.media[0]["volumes"]
     def description(self):
         return self.media[0]["description"]
     def genres(self):
@@ -57,5 +78,23 @@ class Manga:
     def tags(self):
         return self.media[0]["tags"]
     def staffs(self):
-        return self.media[0]["staff"]["nodes"][0]["name"]["full"]
+        node = self.media[0]["staff"]["nodes"]
+        slist = []
+        for i in range(0, int(len(node))):
+            sname = node[i]["name"]["full"] 
+            slist.append(sname)
+        return slist
+    def startDate(self):
+        return self.media[0]["startDate"]
+    def endDate(self):
+        return self.media[0]["endDate"]
+    def coverImage(self, SIZE):
+        try:
+            return self.media[0]["coverImage"][SIZE]
+        except KeyError:
+            print("only large medium or extraLarge on SIZE")
+            
+    def bannerImage(self):
+        return self.media[0]["bannerImage"]
+    
 

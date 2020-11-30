@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="anilistpy", 
-    version="0.0.1.3",
-    author="Aaditya Aryal",
+    version="0.0.1.4",
+    author="kalekale",
     author_email="aryalaadi123@gmail.com",
     description="API wrapper for anilist.co",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/aadityaaryal/anilistpy",
+    url="https://github.com/anilistpy/anilistpy",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
