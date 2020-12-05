@@ -57,12 +57,13 @@ class Manga:
         url = 'https://graphql.anilist.co'
 
         response = requests.post(url, json={'query': query, 'variables': variables})
-        raw = json.loads(response.text)
-        self.media = raw["data"]["Page"]["media"]
+        self.raw = json.loads(response.text)
+        self.media = self.raw["data"]["Page"]["media"]
            
     def reload(self):
         self.__init__(self.id)
-
+    def json(self):
+        return self.raw
     def title(self, LA): # LA options: {romaji}{english}
         return self.media[0]["title"][LA]
     def chapters(self):
@@ -90,7 +91,12 @@ class Manga:
         return self.media[0]["endDate"]
     def coverImage(self, SIZE):
         try:
-            return self.media[0]["coverImage"][SIZE]
+            if SIZE == "L":
+                return self.media[0]["coverImage"]["large"]
+            elif SIZE == "M":
+                return self.media[0]["coverImage"]["medium"]
+            elif SIZE == "EL":
+                return self.media[0]["coverImage"]["extraLarge"]
         except KeyError:
             print("only large medium or extraLarge on SIZE")
             
