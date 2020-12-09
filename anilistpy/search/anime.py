@@ -20,7 +20,7 @@ class animeSearch:
         variables = {
             'search': sQ,
             'page': 1,
-            'perPage': 5,
+            'perPage': 16,
             'MediaType': "ANIME"
         }
 
@@ -33,3 +33,6 @@ class animeSearch:
         return self.media[resultnumber]["id"]
     def title(self, resultnumber: int):
         return self.media[resultnumber]["title"]["romaji"]
+
+    def result(self):
+        return self.media
