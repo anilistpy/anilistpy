@@ -7,8 +7,8 @@ setuptools.setup(
     name="anilistpy", 
     version="0.0.1.4.3",
     author="kalekale",
-    author_email="aryalaadi123@gmail.com",
-    description="API wrapper for anilist.co",
+    author_email="kalekale.anon@gmail.com",
+    description="python API wrapper for anilist.co",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/anilistpy/anilistpy",
@@ -20,3 +20,5 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
 )
+#python3 -m twine upload --repository pypi dist/* 
+#python3 setup.py sdist bdist_wheel
