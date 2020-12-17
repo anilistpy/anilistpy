@@ -2,6 +2,7 @@ from anilistpy.anime import Anime
 from anilistpy.manga import Manga
 from anilistpy.search.manga import mangaSearch
 from anilistpy.search.anime import animeSearch
+from anilistpy.search.char import charSearch
 
 '''
     <one line to give the program's name and a brief idea of what it does.>

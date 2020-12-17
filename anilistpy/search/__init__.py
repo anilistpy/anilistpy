@@ -1,5 +1,7 @@
 from anilistpy.search.anime import animeSearch
 from anilistpy.search.manga import mangaSearch
+from anilistpy.search.char import charSearch
+
 '''
     <one line to give the program's name and a brief idea of what it does.>
     Copyright (C) 2020  0kalekale
