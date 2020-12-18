@@ -1,4 +1,6 @@
 # Anilistpy ![anilistpy](https://avatars3.githubusercontent.com/u/75199724?s=30&v=4)
+[![CodeFactor](https://www.codefactor.io/repository/github/anilistpy/anilistpy/badge)](https://www.codefactor.io/repository/github/anilistpy/anilistpy)
+
 An easy to use python3 wrapper for anilist.co APIv2
 
 ```
