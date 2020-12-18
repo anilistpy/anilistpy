@@ -8,47 +8,79 @@ class Anime:
         self.id = sQ
         #graphql api query
         query = '''
-        query ($id: Int, $page: Int, $perPage: Int, $search: String) {
-            Page (page: $page, perPage: $perPage) {
-                media (id: $id, search: $search, type: ANIME) {
-                    id
-                    title {
-                        romaji
-                        english
-                    }
-                    episodes
-                    description
-                    duration
-                    genres
-                    averageScore
-                    tags{
-                        name
-                    }
-                    studios {
-                        nodes{
-                            name
-                        }
-                    }
-                    startDate{
-                        year
-                        month
-                        day
-                    }
-                    endDate{
-                        year
-                        month
-                        day
-                    }
-                    season
-                    coverImage{
-                        medium
-                        large
-                        extraLarge
-                    }
-                    bannerImage
-                }
-            }
+query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+  Page(page: $page, perPage: $perPage) {
+    media(id: $id, search: $search, type: ANIME) {
+      id
+      title {
+        romaji
+        english
+      }
+      episodes
+      description
+      format
+      status
+      duration
+      genres
+      tags {
+        name
+      }
+      studios {
+        nodes {
+          name
         }
+      }
+      startDate {
+        year
+        month
+        day
+      }
+      endDate {
+        year
+        month
+        day
+      }
+      season
+      seasonYear
+      seasonInt
+      countryOfOrigin
+      coverImage {
+        medium
+        large
+        extraLarge
+      }
+      bannerImage
+      hashtag
+      synonyms
+      meanScore
+      averageScore
+      trailer {
+        id
+        thumbnail
+        site
+      }
+      staff(sort: FAVOURITES_DESC) {
+        edges {
+          node {
+            name {
+              full
+            }
+            id
+          }
+        }
+      }
+      characters(role: MAIN) {
+        edges {
+          node {
+            name {
+              full
+            }
+          }
+        }
+      }
+    }
+  }
+}
         '''
 
         variables = {
