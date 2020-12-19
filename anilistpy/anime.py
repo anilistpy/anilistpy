@@ -161,7 +161,7 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
         for i in range(0, len(_edges_staff)):
           return_list.append(_edges_staff[i]["node"]["id"])
         
-      elif getID == False:
+      elif getID is False:
         for i in range(0,len(_edges_staff)):
           return_list.append(_edges_staff[i]["node"]["name"]["full"])
       else: 
