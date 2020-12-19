@@ -1,5 +1,8 @@
 import requests
 import json
+
+from anilistpy.utils import videoLink
+
 class Manga:
     def __init__(self, sQ):
     # init function
@@ -170,3 +173,15 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     # returns the status of the media
     def status(self):
         return self.media[0]["status"]
+    
+    # returns offical hashtags
+    def hashtag(self):
+      return self.media[0]["hashtag"]
+    
+    # returns synonyms 
+    def synonyms(self):
+      return self.media[0]["synonyms"]
+    
+    # returns country of origin
+    def countryOfOrigin(self):
+      return self.media[0]["countryOfOrigin"]
