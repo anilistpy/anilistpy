@@ -1,6 +1,5 @@
 anilistpy/__pycache__/*
 anilistpy/search/__pycache__/*
-test.py 
 anilistpy.egg-info/*
 build/*
 dist/*
