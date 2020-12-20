@@ -1,8 +1,6 @@
 import requests
 import json
 
-from anilistpy.utils import videoLink
-
 class Anime:
     # init function
     # takes 1 arg -> sQ: id of the anime  
@@ -53,7 +51,6 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
         extraLarge
       }
       bannerImage
-      source
       hashtag
       synonyms
       meanScore
@@ -199,24 +196,3 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     def status(self):
         return self.media[0]["status"]
     
-    # returns offical hashtags
-    def hashtag(self):
-      return self.media[0]["hashtag"]
-    
-    # returns synonyms 
-    def synonyms(self):
-      return self.media[0]["synonyms"]
-    
-    # returns country of origin
-    def countryOfOrigin(self):
-      return self.media[0]["countryOfOrigin"]
-    
-    # returns trailer link
-    def trailerlink(self):
-      site = self.media[0]["trailer"]["site"]
-      id = self.media[0]["trailer"]["id"]
-      return videoLink(site, id)
-    
-    #returns trailer thubmnail
-    def trailer_thumbnail(self):
-      return self.media[0]["trailer"]["thumbnail"]

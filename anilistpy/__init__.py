@@ -3,7 +3,6 @@ from anilistpy.manga import Manga
 from anilistpy.search.manga import mangaSearch
 from anilistpy.search.anime import animeSearch
 from anilistpy.search.char import charSearch
-from anilistpy.utils import videoLink
 
 '''
     easy to use wrapper for anilist apiv2
