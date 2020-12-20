@@ -117,3 +117,4 @@ class Anime:
     #returns the url of the banner image
     def bannerImage(self):
         return self.media[0]["bannerImage"]
+

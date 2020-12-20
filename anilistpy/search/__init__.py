@@ -3,7 +3,7 @@ from anilistpy.search.manga import mangaSearch
 from anilistpy.search.char import charSearch
 
 '''
-    easy to use wrapper for anilist apiv2
+    <one line to give the program's name and a brief idea of what it does.>
     Copyright (C) 2020  0kalekale
 
     This program is free software: you can redistribute it and/or modify
