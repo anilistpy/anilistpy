@@ -3,9 +3,10 @@ from anilistpy.manga import Manga
 from anilistpy.search.manga import mangaSearch
 from anilistpy.search.anime import animeSearch
 from anilistpy.search.char import charSearch
+from anilistpy.utils import videoLink
 
 '''
-    <one line to give the program's name and a brief idea of what it does.>
+    easy to use wrapper for anilist apiv2
     Copyright (C) 2020  0kalekale
 
     This program is free software: you can redistribute it and/or modify
