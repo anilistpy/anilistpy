@@ -102,7 +102,6 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     #returns the raw json returned from the api request
     def json(self):
         return self.raw
-        
     #returns the title, 1 arg: LA 
     def title(self, LA: str): # LA options: {romaji}{english}
         return self.media[0]["title"][LA]
@@ -150,4 +149,3 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     #returns the url of the banner image
     def bannerImage(self):
         return self.media[0]["bannerImage"]
-    

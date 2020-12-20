@@ -6,65 +6,47 @@ class Manga:
     # takes 1 arg -> sQ: id of the anime 
         self.id = sQ
         query = '''
-query ($id: Int, $page: Int, $perPage: Int, $search: String) {
-  Page(page: $page, perPage: $perPage) {
-    media(id: $id, search: $search, type: MANGA) {
-      id
-      title {
-        romaji
-      }
-      chapters
-      description
-      genres
-      averageScore
-      meanScore
-      countryOfOrigin
-      source
-      hashtag
-      synonyms
-      characters(role: MAIN){
-        edges{
-          node{
-            name{
-              full
+        query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+            Page (page: $page, perPage: $perPage) {
+                media (id: $id, search: $search, type: MANGA) {
+                    id
+                    title {
+                        romaji
+                    }
+                    chapters
+                    description
+                    genres
+                    averageScore
+                    volumes
+                    tags{
+                        name
+                    }
+                    staff{
+                        nodes{
+                            name{
+                                full
+                            }
+                        }
+                    }
+                    startDate{
+                        year
+                        month
+                        day
+                    }
+                    endDate{
+                        year
+                        month
+                        day
+                    }
+                    coverImage{
+                        medium
+                        large
+                        extraLarge
+                    }
+                    bannerImage
+                }
             }
-            id
-          }
         }
-      }
-      volumes
-      tags {
-        name
-      }
-      staff (sort: FAVOURITES_DESC){
-        nodes {
-          name {
-            full
-          }
-          id
-        }
-      }
-      startDate {
-        year
-        month
-        day
-      }
-      endDate {
-        year
-        month
-        day
-      }
-      coverImage {
-        medium
-        large
-        extraLarge
-      }
-      bannerImage
-      
-    }
-  }
-}
-
         '''
 
         variables = {
