@@ -8,25 +8,38 @@
 
 An easy to use python3 wrapper for anilist.co APIv2
 
+# Installing
+
+## Installing from pypi
+
 ```
 pip install anilistpy
 ```
- 
-Documenation and Examples [here](https://anilistpy.readthedocs.io/)
 
-```py
-# new in v0.0.3
-```py
-print(anime.staff(getID=True))   # list of staffs ids
-print(anime.staff(getID=False))  # list of staff names
-
-print(anime.trailer_thumbnail()) # image link for trailer's thumbnail
-print(anime.trailerlink())       # video link for the trailer
-print(anime.synonyms())          # synonyms 
-print(anime.hashtag())           # offical hashtags
-print(anime.countryOfOrigin())   # country of origin 
+## Installing from git
+```
+pip install git+https://github.com/anilistpy/anilistpy
 ```
 
+## Installing from git (Unstable / Development branch)
+```
+pip install git+https://github.com/anilistpy/anilistpy@dev
+```
+
+# Getting started
+
+# Importing
+
+```py
+import anilistpy
+```
+
+or manually import the method/class you need
+```py
+from anilistpy import Anime
+```
+ 
+More Documenation and Examples [here](https://anilistpy.github.io/)
 
 
 ![agpl3](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
