@@ -50,4 +50,17 @@ query ($id: Int) {
 
     def _test(self):
         return self.media
-        
+
+    def reload(self):
+      return self.__init__(self.sQ)
+    def json(self):
+      return self.raw
+
+    def name(self, format):
+        return self.media["name"][format]    
+    def image(self, SIZE):
+        return self.media["image"][SIZE]
+    def description(self):
+        return self.media["description"]
+    def media(self):
+        return self.media["media"]["edges"]["node"]
