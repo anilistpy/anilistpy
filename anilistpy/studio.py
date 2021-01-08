@@ -34,4 +34,8 @@ query ($id: Int) {
 
     def _test(self):
         return self.media
-        
+
+    def name(self):
+        return self.media["name"]     
+    def media(self):
+        return self.media["media"]["nodes"]  
