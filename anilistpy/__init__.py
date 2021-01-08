@@ -6,6 +6,8 @@ from anilistpy.studio import Studio
 from anilistpy.search.manga import mangaSearch
 from anilistpy.search.anime import animeSearch
 from anilistpy.search.char import charSearch
+from anilistpy.search.staff import searchStaff
+from anilistpy.search.studio import searchStudio
 from anilistpy.utils import videoLink
 
 '''
