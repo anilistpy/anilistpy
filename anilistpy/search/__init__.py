@@ -1,6 +1,8 @@
 from anilistpy.search.anime import animeSearch
 from anilistpy.search.manga import mangaSearch
 from anilistpy.search.char import charSearch
+from anilistpy.search.staff import searchStaff
+from anilistpy.search.studio import searchStudio
 
 '''
     easy to use wrapper for anilist apiv2
