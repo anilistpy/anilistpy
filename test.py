@@ -2,18 +2,17 @@
 
 import anilistpy
 
-anime = anilistpy.Anime(113970)
-print(anime.status())
-print(anime.coverImage("extraLarge"))
-print(anime.meanScore())
-print(anime.title("native"))
-#print(anime.json())
+def test():
+    # anime test
+    searchA = anilistpy.animeSearch("gochiusa")
+    animeObj = anilistpy.Anime(searchA.id(0))
+    _jA = animeObj.json()
 
-print(anime.staff(getID=True))
-print(anime.staff(getID=False))
+    # manga test 
+    searchM = anilistpy.mangaSearch("chainsawman")
+    mangaObj = anilistpy.Manga(searchM.id(0))
+    _jA = mangaObj.json()
 
-print(anime.trailer_thumbnail())
-print(anime.synonyms())
-print(anime.hashtag())
-print(anime.countryOfOrigin())
+    return 0
 
+test()
