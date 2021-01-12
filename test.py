@@ -18,6 +18,11 @@ def test():
     chObj = anilistpy.Character(searchC.id(0))
     _jC = chObj.json()
 
+    # studio test
+    searchStd = anilistpy.searchStudio("kyoto")
+    stdObj = anilistpy.Studio(searchStd.id(0))
+    _jStd = stdObj.json()
+
     return 0
 
 test()
