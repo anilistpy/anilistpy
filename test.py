@@ -23,6 +23,12 @@ def test():
     stdObj = anilistpy.Studio(searchStd.id(0))
     _jStd = stdObj.json()
 
+    # staff test
+    
+    searchStf = anilistpy.searchStaff("anno")
+    stfObj = anilistpy.Staff(searchStf.id(0))
+    _jStf = stfObj.json()
+    
     return 0
 
 test()
