@@ -21,13 +21,13 @@ def test():
     # studio test
     searchStd = anilistpy.searchStudio("kyoto")
     stdObj = anilistpy.Studio(searchStd.id(0))
-    _jStd = stdObj.json()
+    _jStd = stdObj._test()
 
     # staff test
     
     searchStf = anilistpy.searchStaff("anno")
     stfObj = anilistpy.Staff(searchStf.id(0))
-    _jStf = stfObj.json()
+    _jStf = stfObj._test()
     
     return 0
 
