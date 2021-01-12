@@ -11,7 +11,12 @@ def test():
     # manga test 
     searchM = anilistpy.mangaSearch("chainsawman")
     mangaObj = anilistpy.Manga(searchM.id(0))
-    _jA = mangaObj.json()
+    _jM = mangaObj.json()
+
+    # character test
+    searchC = anilistpy.charSearch("shamiko")
+    chObj = anilistpy.Character(searchC.id(0))
+    _jC = chObj.json()
 
     return 0
 
