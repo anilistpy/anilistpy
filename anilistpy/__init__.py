@@ -10,6 +10,8 @@ from anilistpy.search.staff import searchStaff
 from anilistpy.search.studio import searchStudio
 from anilistpy.utils import videoLink
 
+from anilistpy.mutation.media import Media
+
 '''
     easy to use wrapper for anilist apiv2
     Copyright (C) 2020  0kalekale

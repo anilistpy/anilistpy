@@ -1,4 +1,4 @@
-# Starting work for mutations
+from anilistpy.mutation.media import Media
 
 '''
     easy to use wrapper for anilist apiv2
