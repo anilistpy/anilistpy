@@ -2,7 +2,8 @@ import requests
 import json
 
 class Media:
-    def SaveMediaListEntry(mediaId, accessToken, status):
+ 
+    def setstatus(mediaId, accessToken, status):
         mutation = '''
 mutation ($mediaId: Int, $status: MediaListStatus) {
     SaveMediaListEntry (mediaId: $mediaId, status: $status) {
@@ -28,3 +29,4 @@ mutation ($mediaId: Int, $status: MediaListStatus) {
         raw = json.loads(response.text)
 
         return raw
+        
