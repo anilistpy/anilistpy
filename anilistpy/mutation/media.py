@@ -28,5 +28,4 @@ mutation ($mediaId: Int, $status: MediaListStatus) {
 
         raw = json.loads(response.text)
 
-        return raw
-        
+        return 0

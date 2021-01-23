@@ -11,7 +11,7 @@ from anilistpy.search.studio import searchStudio
 from anilistpy.utils import videoLink
 
 from anilistpy.mutation.media import Media
-
+from anilistpy.mutation.user import User
 '''
     easy to use wrapper for anilist apiv2
     Copyright (C) 2020  0kalekale

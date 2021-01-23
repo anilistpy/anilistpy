@@ -3,12 +3,31 @@ import json
 token = json.load(open('test/secret.json', 'r'))["token"]
 
 # CHANGING STATUS TO PLANNING 
-mutation_result = mutation.Media.SaveMediaListEntry(1, token, "PLANNING")
+mutation_result = mutation.Media.setstatus(1, token, "PLANNING")
 
 print(mutation_result)
 
 '''
 stdout of this code:
 
-{'data': {'SaveMediaListEntry': {'id': 162834756, 'status': 'PLANNING'}}}
+0
+'''
+
+bio = '''
+test
+test
+
+
+test
+test
+
+
+test
+test
+'''
+mutation_result = mutation.User.updatebio(token, bio)
+'''
+stdout of this code:
+
+0
 '''
