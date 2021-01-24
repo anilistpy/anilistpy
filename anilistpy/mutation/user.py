@@ -29,4 +29,4 @@ mutation ($bio: String) {
 
         raw = json.loads(response.text)
 
-        return 0
+        return raw
