@@ -3,3 +3,4 @@ anilistpy/search/__pycache__/*
 anilistpy.egg-info/*
 build/*
 dist/*
+test/secret.json
