@@ -29,7 +29,20 @@ query ($username: String, $type: MediaType, $status: MediaListStatus) {
         url = 'https://graphql.anilist.co'
 
         response = requests.post(url, json={'query': query, 'variables': variables})
-        self.raw = json.loads(response.text)
+        
+        self.raw = json.loads(response.text)["data"]["MediaListCollection"]["lists"][0]["entries"]
+        
+    def title_list(self, LA):
+        _title_list = []
+        for i in range(0,len(self.raw)):
+            _title_list.append(self.raw[i]["media"]["title"][LA])
+        
+        return _title_list
     
-    def raw(self):
-        return self.raw
+    def id_list(self):
+        _id_list = []
+        for i in range(0, len(self.raw)):
+            _id_list.append(self.raw[i]["media"]["id"])
+        
+        return _id_list
+    
