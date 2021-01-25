@@ -6,7 +6,7 @@
 [![pypi verison](https://img.shields.io/pypi/v/anilistpy.svg)](https://pypi.org/project/anilistpy/)
 [![GitHub license](https://img.shields.io/github/license/anilistpy/anilistpy)](https://github.com/anilistpy/anilistpy/blob/master/license)
 
-An easy to use python3 wrapper for anilist.co APIv2
+An easy to use python3 wrapper for anilist.co APIv2 (UNOFFICIAL)
 
 # Installing
 
@@ -40,6 +40,11 @@ from anilistpy import Anime
 ```
  
 More Documenation and Examples [here](https://anilistpy.github.io/)
+(note: the Documenation is still being updated, if you need help make a issue)
 
+# Change log 0.0.4 -> 0.0.5
+
+- added wrappers for mutation api 
+- more minor stuffs
 
 ![agpl3](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
