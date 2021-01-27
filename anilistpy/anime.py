@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 from anilistpy.utils import videoLink
 
@@ -58,6 +59,10 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
       synonyms
       meanScore
       averageScore
+      nextAiringEpisode {
+        timeUntilAiring
+        airingAt
+      }
       trailer {
         id
         thumbnail
@@ -220,3 +225,7 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     #returns trailer thubmnail
     def trailer_thumbnail(self):
       return self.media[0]["trailer"]["thumbnail"]
+  
+    def nextAiringEpisode(self):
+        timeair = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(self.media[0]["nextAiringEpisode"]["airingAt"])))
+        return timeair
