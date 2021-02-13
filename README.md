@@ -1,6 +1,6 @@
 # Anilistpy ![anilistpy](https://avatars3.githubusercontent.com/u/75199724?s=30&v=4)
 
-[![Build Status](https://travis-ci.com/anilistpy/anilistpy.svg?branch=master)](https://travis-ci.com/anilistpy/anilistpy)
+![Test](https://github.com/anilistpy/anilistpy/workflows/Test/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/anilistpy/anilistpy/badge)](https://www.codefactor.io/repository/github/anilistpy/anilistpy)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/anilistpy)
 [![pypi verison](https://img.shields.io/pypi/v/anilistpy.svg)](https://pypi.org/project/anilistpy/)
@@ -11,20 +11,21 @@ An easy to use python3 wrapper for anilist.co APIv2 (UNOFFICIAL)
 # Installing
 
 ## Installing from pypi
-
 ```
 pip install anilistpy
-```
-
-## Installing from git
-```
-pip install git+https://github.com/anilistpy/anilistpy
 ```
 
 ## Installing from git (Unstable / Development branch)
 ```
 pip install git+https://github.com/anilistpy/anilistpy@dev
 ```
+
+## Build Requirements:
+
+- Rust Toolchain (rustc cargo) 
+- Python Toolchain (pip wheel setuptools setuptools-rust)
+
+## NOTE: IF YOU DONT WANT RUST DEPENDENECY USE anilistpy==0.0.5.1 or build from the python branch
 
 # Getting started
 
