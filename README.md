@@ -1,6 +1,6 @@
 # Anilistpy ![anilistpy](https://avatars3.githubusercontent.com/u/75199724?s=30&v=4)
 
-[![Build Status](https://travis-ci.com/anilistpy/anilistpy.svg?branch=master)](https://travis-ci.com/anilistpy/anilistpy)
+![Test](https://github.com/anilistpy/anilistpy/workflows/Test/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/anilistpy/anilistpy/badge)](https://www.codefactor.io/repository/github/anilistpy/anilistpy)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/anilistpy)
 [![pypi verison](https://img.shields.io/pypi/v/anilistpy.svg)](https://pypi.org/project/anilistpy/)
@@ -10,21 +10,18 @@ An easy to use python3 wrapper for anilist.co APIv2 (UNOFFICIAL)
 
 # Installing
 
-## Installing from pypi
+```
+pip install anilistpy==0.0.5.1
 
-```
-pip install anilistpy
-```
+or
 
-## Installing from git
-```
-pip install git+https://github.com/anilistpy/anilistpy
+git clone https://github.com/anilistpy/anilistpy/
+python3 setup.py install --user
 ```
 
-## Installing from git (Unstable / Development branch)
-```
-pip install git+https://github.com/anilistpy/anilistpy@dev
-```
+# note : after v0.0.5.x, rust with pyo3 will be used for v0.1.x
+
+series 0.0.5.x will still be maintained for bug fixes on the python branch
 
 # Getting started
 
@@ -42,9 +39,12 @@ from anilistpy import Anime
 More Documenation and Examples [here](https://anilistpy.github.io/)
 (note: the Documenation is still being updated, if you need help make a issue)
 
-# Change log 0.0.4 -> 0.0.5
+# Contributing
 
-- added wrappers for mutation api 
-- more minor stuffs
+- Updating/Writing the documentation would help alot, also of anilistpy's features are undocumented
+
+- code contributions will only be accepeted on the dev or python branch.
+
+- help providing binaries for windows.
 
 ![agpl3](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
