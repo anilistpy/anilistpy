@@ -4,3 +4,4 @@ anilistpy.egg-info/*
 build/*
 dist/*
 test/secret.json
+target/
