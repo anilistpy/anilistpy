@@ -2,8 +2,7 @@ name: Build-Test-GNU-Linux
  
 on:  
   push:
-    branches: [ dev ]
-
+    branches: [ master ] 
 jobs:
  
   build:
