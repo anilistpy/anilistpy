@@ -15,37 +15,21 @@ An easy to use python3 wrapper for anilist.co APIv2 (UNOFFICIAL)
 pip install anilistpy
 ```
 
-## Installing from git (Unstable / Development branch)
-```
-pip install git+https://github.com/anilistpy/anilistpy@dev
-```
-
 ## Build Requirements:
 
 - Rust Toolchain (rustc cargo) 
 - Python Toolchain (pip wheel setuptools setuptools-rust)
 
-## NOTE: IF YOU DONT WANT RUST DEPENDENECY USE anilistpy==0.0.5.1 or build from the python branch
+## NOTE FOR WINDOWS/MAC USERS:
 
-# Getting started
+i will only provide binaries for gnu/linux starting from v0.1.x, if you want to use this library on these platforms, you will have to compile from source or install v0.0.5.x, which wont get new features but get bug fixes.
 
-# Importing
-
-```py
-import anilistpy
-```
-
-or manually import the method/class you need
-```py
-from anilistpy import Anime
-```
  
-More Documenation and Examples [here](https://anilistpy.github.io/)
-(note: the Documenation is still being updated, if you need help make a issue)
+Documenation and Examples [here](https://anilistpy.github.io/) 
+(note: the Documenation is not complete, if you need help make a issue)
 
-# Change log 0.0.4 -> 0.0.5
+# Change log 0.5.x -> 0.1.x
 
-- added wrappers for mutation api 
-- more minor stuffs
+- moving to rust for better performance 
 
 ![agpl3](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
