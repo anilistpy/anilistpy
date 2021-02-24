@@ -14,6 +14,9 @@ from anilistpy.mutation.media import Media
 from anilistpy.mutation.user import User
 
 from anilistpy.user.medialist import MediaList 
+
+def __ver__():
+    return "0.5.3"
 '''
     easy to use wrapper for anilist apiv2
     Copyright (C) 2020  0kalekale
