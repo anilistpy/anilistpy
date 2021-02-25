@@ -10,7 +10,7 @@ from anilistpy.sr_anime import animeSearch
 from anilistpy.sr_char import charSearch
 from anilistpy.sr_staff import searchStaff
 from anilistpy.sr_studio import searchStudio
-from anilistpy.utils import videoLink
+#from anilistpy.utils import videoLink
 
 from anilistpy.mt_media import Media
 from anilistpy.mt_user import User

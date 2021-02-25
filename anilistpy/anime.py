@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-from anilistpy.utils import videoLink
+from .anilistpy import videoLink
 
 class Anime:
     # init function

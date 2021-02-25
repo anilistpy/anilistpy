@@ -1,7 +1,7 @@
 import requests
 import json
 
-from anilistpy.utils import videoLink
+from .anilistpy import videoLink
 
 class Manga:
     def __init__(self, sQ):
