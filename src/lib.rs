@@ -21,7 +21,11 @@ fn __ver__() -> PyResult<String> {
 
 #[pyfunction]
 fn __studio_test() -> PyResult<String>{
-        Ok(format!("{:?}", studio::__studio_test0()))
+    match studio::__studio_test0(){
+        Ok(res) => {Ok(format!("{}",res))}
+        Err(_err) => {Ok(format!("Error"))}
+    }    
+    //Ok(format!("{:?}", studio::__studio_test0()))
    }
 
 #[pymodule]
