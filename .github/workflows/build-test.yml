@@ -17,7 +17,7 @@ jobs:
         run: sudo apt install python3 python3-pip python3-dev && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=stable
 
       - name: pip
-        run: pip3 install setuptools wheel setuptools-rust requests
+        run: pip3 install setuptools==46.1 wheel setuptools-rust requests
       
       - name: compile
         run: python3 setup.py install --user
