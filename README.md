@@ -20,10 +20,9 @@ pip install anilistpy
 - Rust Toolchain (rustc cargo) 
 - Python Toolchain (pip wheel setuptools setuptools-rust)
 
-## NOTE FOR WINDOWS/MAC USERS:
+## Installing from the AUR
 
-i will only provide binaries for gnu/linux starting from v0.1.x, if you want to use this library on these platforms, you will have to compile from source or install v0.0.5.x, which wont get new features but get bug fixes.
-
+Arch users can install the [python3-anilistpy](https://aur.archlinux.org/packages/python3-anilistpy/) package from the AUR. 
  
 Documenation and Examples [here](https://anilistpy.github.io/) 
 (note: the Documenation is not complete, if you need help make a issue)
